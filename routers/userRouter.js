@@ -14,4 +14,15 @@ router.route("/Emails").post(async (req, res) => {
   }
 });
 
+router.route("/getEmails").get(async (req, res) => {
+  try {
+    const users = await User.find();
+    if (users) {
+      res.json(users);
+    } else res.json({});
+  } catch (err) {
+    res.status(400).json("failed")
+  }
+});
+
 export default router;
