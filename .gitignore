@@ -2,3 +2,4 @@
 /controllers
 ./package-lock.json
 ./transaction.js
+./env
