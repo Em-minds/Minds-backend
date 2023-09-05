@@ -1,5 +1,5 @@
 /node_modules
 ./package-lock.json
 ./transaction.js
-./env
-./app/controllers/user.controller.mjs
+.env
+app/controllers/user.controller.mjs
