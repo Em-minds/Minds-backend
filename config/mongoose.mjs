@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import config from "./config.js";
+import config from "./config.mjs";
 
 const connectDB = () => {
     mongoose.set('strictQuery', true);

@@ -1,12 +1,20 @@
 import mongoose from "mongoose";
 
-const User = new mongoose.Schema(
+const schema = new mongoose.Schema(
   {
     email: { type: String },
+    password: {type: String }
   },
   { timestamps: true }
 );
 
-const UserSchema = mongoose.model("User", User);
+schema.method("toJSON", function() {
+  const { __v, _id, ...object } = this.toObject();
+  object.id = _id;
+  return object;
+});
 
-export default UserSchema;
+
+const User = mongoose.model("User", schema);
+
+export default User;
