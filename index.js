@@ -3,9 +3,9 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import connectDB from "./config/mongoose.mjs";
-import config from "./config/config.mjs";
-import router from "./routers/index.mjs";
+import connectDB from "./app/config/mongoose.mjs";
+import config from "./app/config/config.mjs";
+import router from "./app/routers/index.mjs";
 
 const app = express();
 
