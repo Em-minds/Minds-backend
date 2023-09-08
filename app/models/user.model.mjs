@@ -16,7 +16,7 @@ const schema = new mongoose.Schema(
         }
     },
     google: {
-        id: {
+        googleId: {
             type: String
         },
         email: {
