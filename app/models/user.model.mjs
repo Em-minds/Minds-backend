@@ -1,10 +1,29 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema(
-  {
-    email: { type: String },
-    password: {type: String }
-  },
+  method: {
+        type: String,
+        enum: ['local', 'google'],
+        required: true
+    },
+    local: {
+        email: {
+            type: String,
+            lowercase: true
+        },
+        password: {
+            type: String
+        }
+    },
+    google: {
+        id: {
+            type: String
+        },
+        email: {
+            type: String,
+            lowercase: true
+        }
+    },
   { timestamps: true }
 );
 
