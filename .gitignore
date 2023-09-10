@@ -3,3 +3,5 @@
 ./transaction.js
 .env
 app/controllers/user.controller.mjs
+app/config/passport.mjs
+app/helpers/mailer.mjs

@@ -24,6 +24,17 @@ const schema = new mongoose.Schema({
           lowercase: true
       }
   },
+  isVerified: {
+    type: Boolean,
+    default: false
+  },
+  verificationToken: {
+    type: String,
+  },
+  tokenExpiration: {
+    type: Date,
+  },
+
 }, { timestamps: true });
 
 schema.method("toJSON", function() {
